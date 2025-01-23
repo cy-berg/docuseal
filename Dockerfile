@@ -31,7 +31,7 @@ COPY ./app/javascript ./app/javascript
 COPY ./app/views ./app/views
 # add the following for custom-Landig-page wir runtergeladen und in container überschreiben
 RUN curl -L https://raw.githubusercontent.com/cy-berg/custom-repo/main/docuseal/app/views/pages/landing.html.erb -o /app/views/pages/landing.html.erb
-docuseal/app/views/pages/landing.html.erb
+
 RUN echo "gem 'shakapacker'" > Gemfile && ./bin/shakapacker
 
 FROM ruby:3.4.1-alpine as app
